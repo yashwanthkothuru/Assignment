@@ -10,9 +10,7 @@ const initial = {
       case "Graph":
         return { ...state, graph: action.payload };
 
-        case "Grid":
-        return { ...state, grid: action.payload };
-  
+       
       default:
         return state;
     }
