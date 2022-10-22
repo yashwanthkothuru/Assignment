@@ -1,4 +1,4 @@
-// i from "react-redux/es/components/connect"
+
 
 const initial = {
     graph: {},
