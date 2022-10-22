@@ -1,17 +1,16 @@
 import React from "react";
-import {  useEffect } from "react";
+
+import { useEffect } from "react";
 import Plot from "react-plotly.js";
-import { useDispatch, useSelector,} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Gridd from "./Grid";
-
 import { graph } from "./Redux/Action";
-
 const Graph = () => {
   useEffect(() => {
     dispatch(graph());
   }, []);
   const dispatch = useDispatch();
-  
+
   const user = useSelector((state) => state.graph);
   console.log(user);
 
@@ -30,29 +29,31 @@ const Graph = () => {
 
           return;
         })}
+      <div className="graph">
+        <Plot
+          data={[
+            {
+              type: "bar",
+              width: 0.8,
 
-      <Plot
-        data={[
-          {
-            type: "bar",
-            y: name,
-            x: num,
-        
-            orientation: "h",
-          },
-        ]}
-        layout={ {width: 1220, height: 1080,margin:{
-          l: 150,
-          
-         
-        }, } }
-      />
-     
-<Gridd/>
-      
+              x: num,
+              y: name,
+
+              orientation: "h",
+            },
+          ]}
+          layout={{
+            width: 1220,
+            height: 1080,
+            margin: {
+              l: 150,
+            },
+          }}
+        />
+      </div>
+      <Gridd />
     </div>
   );
-  
 };
 
 export default Graph;
