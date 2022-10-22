@@ -2,13 +2,12 @@ import React, { useState, useEffect } from "react";
 
 import { AgGridReact, AgGridColumn } from "ag-grid-react";
 
-import useMediaQuery from "@mui/material/useMediaQuery";
 
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 
 const Gridd = () => {
-  const matches = useMediaQuery("(min-width:1000px)");
+  
 
   const [rowData, setRowdata] = useState([]);
 
@@ -27,9 +26,9 @@ const Gridd = () => {
     <div
       className="ag-theme-alpine box"
       style={{ height: 800, width: 1000, marginleft: 40 }}
-      matches={matches}
+      
     >
-      <span>{`is:${matches}`}</span>
+      
       <AgGridReact rowData={rowData}>
         <AgGridColumn
           field="id"
