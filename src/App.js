@@ -1,14 +1,12 @@
 import './App.css';
 import Graph from './Graph';
-import Layout from 'antd/lib/layout/layout';
+
 function App() {
   return (
-    <div className="App">
-      <Layout>
+    <div>
+      
       <Graph/>
-      </Layout>
-     
-   
+      
     </div>
   );
 }

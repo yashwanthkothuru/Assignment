@@ -2,13 +2,13 @@
 
 const initial = {
     graph: {},
-    grid:{}
+    
   };
   
-  function Reducer(state = initial, action) {
-    switch (action.type) {
+  function Reducer(state = initial,{type,payload}) {
+    switch (type) {
       case "Graph":
-        return { ...state, graph: action.payload };
+        return { ...state, graph: payload };
 
        
       default:
