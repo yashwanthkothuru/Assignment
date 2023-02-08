@@ -3,9 +3,8 @@ import React from "react";
 import { useEffect } from "react";
 import Plot from "react-plotly.js";
 import { useDispatch, useSelector } from "react-redux";
-import BarGraph from "./BarGraph";
 import { graph } from "./Redux/Action";
-const Graph = () => {
+const BarGraph = () => {
   useEffect(() => {
     dispatch(graph());
   }, []);
@@ -33,7 +32,7 @@ const Graph = () => {
         <Plot
           data={[
             {
-              type: "Bar",
+              type: "bar",
               width: 0.8,
 
               x: num,
@@ -51,9 +50,15 @@ const Graph = () => {
           }}
         />
       </div>
-      <BarGraph />
     </div>
   );
 };
 
-export default Graph;
+export default BarGraph;
+
+
+
+
+
+
+
